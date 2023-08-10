@@ -1,4 +1,4 @@
-import Base from "@mui/material/Button";
+import MuiButton from "@mui/material/Button";
 import { PropsWithChildren, ReactNode } from "react";
 
 type ButtonProps = PropsWithChildren & {
@@ -26,7 +26,7 @@ function Button({
   marginTop,
 }: ButtonProps) {
   return (
-    <Base
+    <MuiButton
       variant={variant}
       disabled={disabled}
       onClick={onClick}
@@ -40,7 +40,7 @@ function Button({
       }}
     >
       {children}
-    </Base>
+    </MuiButton>
   );
 }
 
