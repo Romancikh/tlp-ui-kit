@@ -13,7 +13,8 @@
     "declaration": true,
     "inlineSourceMap": true,
     "inlineSources": true,
-    "outDir": "dist"
+    "outDir": "dist",
+    "skipLibCheck": true
   },
   "include": ["./src/**/*"]
 }
