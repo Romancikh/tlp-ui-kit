@@ -5,7 +5,7 @@
   "main": "./dist/index.js",
   "scripts": {
     "prepack": "npm ci && npm run build",
-    "_clean": "rimfar dist/**/*",
+    "_clean": "rimraf dist/**/*",
     "_build-js": "tsc",
     "_build-js-watch": "npm run _build-js -- -w --preserveWatchOutput",
     "build": "npm run _clean && npm run _build-js",
@@ -13,20 +13,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Romancikh/reactjs-workspace-recomendations.git"
+    "url": "git+https://github.com/Romancikh/tlp-ui-kit.git"
   },
   "author": "Kutimskii Roman <kutimskiy.roma@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Romancikh/reactjs-workspace-recomendations/issues"
+    "url": "https://github.com/Romancikh/tlp-ui-kit/issues"
   },
-  "homepage": "https://github.com/Romancikh/reactjs-workspace-recomendations#readme",
+  "homepage": "https://github.com/Romancikh/tlp-ui-kit#readme",
   "dependencies": {
     "@emotion/styled": "^11.11.0",
-    "@mui/material": "^5.14.4",
-    "rimfar": "^3.0.2-omega"
+    "@mui/material": "^5.14.4"
   },
   "devDependencies": {
+    "rimraf": "^5.0.1",
     "typescript": "^5.1.6"
   },
   "files": [
