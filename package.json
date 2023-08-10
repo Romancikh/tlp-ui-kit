@@ -1,0 +1,35 @@
+{
+  "name": "tlp-ui-kit",
+  "version": "0.0.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "scripts": {
+    "prepack": "npm ci && npm run build",
+    "_clean": "rimfar dist/**/*",
+    "_build-js": "tsc",
+    "_build-js-watch": "npm run _build-js -- -w --preserveWatchOutput",
+    "build": "npm run _clean && npm run _build-js",
+    "dev": "npm run _clean && npm run _build-js-watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Romancikh/reactjs-workspace-recomendations.git"
+  },
+  "author": "Kutimskii Roman <kutimskiy.roma@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Romancikh/reactjs-workspace-recomendations/issues"
+  },
+  "homepage": "https://github.com/Romancikh/reactjs-workspace-recomendations#readme",
+  "dependencies": {
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.14.4",
+    "rimfar": "^3.0.2-omega"
+  },
+  "devDependencies": {
+    "typescript": "^5.1.6"
+  },
+  "files": [
+    "./dist/**/*"
+  ]
+}
