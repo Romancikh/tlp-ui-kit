@@ -9,7 +9,8 @@
     "_build-js": "tsc",
     "_build-js-watch": "npm run _build-js -- -w --preserveWatchOutput",
     "build": "npm run _clean && npm run _build-js",
-    "dev": "npm run _clean && npm run _build-js-watch"
+    "dev": "npm run _clean && npm run _build-js-watch",
+    "postinstall": "tsc"
   },
   "repository": {
     "type": "git",
