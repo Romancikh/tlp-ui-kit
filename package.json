@@ -4,7 +4,7 @@
   "description": "",
   "main": "./dist/index.js",
   "scripts": {
-    "prepack": "npm ci && npm run build",
+    "prepare": "npm ci && npm run build",
     "_clean": "rimraf dist/**/*",
     "_build-js": "tsc",
     "_build-js-watch": "npm run _build-js -- -w --preserveWatchOutput",
