@@ -5,12 +5,6 @@
   "main": "./dist/tlp-ui-kit.umd.js",
   "module": "./dist/tlp-ui-kit.mjs",
   "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "import": "./dist/tlp-ui-kit.mjs",
-      "require": "./dist/tlp-ui-kit.umd.js"
-    }
-  },
   "scripts": {
     "prepack": "npm ci && npm run build",
     "_clean": "rimraf dist",
