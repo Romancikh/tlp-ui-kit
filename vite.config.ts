@@ -11,7 +11,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: resolve(__dirname, "src/index.ts"),
-      name: "TLP-UI-kit",
+      name: "tlp-ui-kit",
     },
     rollupOptions: {
       external: ["react", "react-dom", "react/jsx-runtime"],
