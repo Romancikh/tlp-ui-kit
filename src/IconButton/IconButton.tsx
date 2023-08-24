@@ -2,7 +2,7 @@ import MuiIconButton from "@mui/material/IconButton";
 import { PropsWithChildren } from "react";
 
 type IconButtonProps = PropsWithChildren & {
-  onClick: () => void;
+  onClick?: () => void;
 };
 
 function IconButton({ onClick, children }: IconButtonProps) {
