@@ -1,4 +1,4 @@
-import MuiSelect from "@mui/material/Select";
+import MuiSelect, { SelectChangeEvent } from "@mui/material/Select";
 import { PropsWithChildren } from "react";
 
 type SelectProps = PropsWithChildren & {
@@ -6,7 +6,7 @@ type SelectProps = PropsWithChildren & {
   fullWidth?: boolean;
   value?: string;
   disabled?: boolean;
-  onChange?: () => void;
+  onChange?: (event: SelectChangeEvent<string>) => void;
   maxWidth?: number;
 };
 
