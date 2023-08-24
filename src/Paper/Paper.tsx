@@ -2,11 +2,12 @@ import MuiPaper from "@mui/material/Paper";
 import { PropsWithChildren } from "react";
 
 type PaperProps = PropsWithChildren & {
-  width?: "fit-content";
+  height?: string;
+  width?: "fit-content" | string;
 };
 
-function Paper({ width, children }: PaperProps) {
-  return <MuiPaper sx={{ width }}>{children}</MuiPaper>;
+function Paper({ height, width, children }: PaperProps) {
+  return <MuiPaper sx={{ height, width }}>{children}</MuiPaper>;
 }
 
 export default Paper;
