@@ -1,5 +1,5 @@
 type IconProps = {
-  color?: "primary" | "error" | "secondary";
+  color?: "success" | "primary" | "error" | "secondary";
 };
 
 export default IconProps;
