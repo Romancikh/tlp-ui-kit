@@ -1,8 +1,8 @@
 import { InputBaseComponentProps } from "@mui/material/InputBase";
 import MuiTextField from "@mui/material/TextField";
-import { ChangeEventHandler, PropsWithChildren } from "react";
+import { ChangeEventHandler } from "react";
 
-type TextFieldProps = PropsWithChildren & {
+type TextFieldProps = {
   type?: "number";
   select?: boolean;
   multiline?: boolean;
@@ -30,7 +30,6 @@ function TextField({
   onChange,
   flex,
   margin,
-  children,
 }: TextFieldProps) {
   return (
     <MuiTextField
@@ -46,9 +45,7 @@ function TextField({
       onChange={onChange}
       margin={margin}
       sx={{ flex }}
-    >
-      {children}
-    </MuiTextField>
+    />
   );
 }
 
