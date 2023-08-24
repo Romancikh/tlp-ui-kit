@@ -2,7 +2,7 @@ import MuiListItemText from "@mui/material/ListItemText";
 import { PropsWithChildren } from "react";
 
 type ListItemTextProps = PropsWithChildren & {
-  textAlign: "right";
+  textAlign?: "right";
 };
 
 function ListItemText({ textAlign, children }: ListItemTextProps) {
