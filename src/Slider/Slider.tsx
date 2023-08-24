@@ -1,7 +1,6 @@
 import MuiSlider from "@mui/material/Slider";
-import { PropsWithChildren } from "react";
 
-type SliderProps = PropsWithChildren & {
+type SliderProps = {
   name?: string;
   marks?: boolean;
   valueLabelDisplay?: "auto" | "on" | "off";
@@ -21,7 +20,6 @@ function Slider({
   value,
   onChange,
   width,
-  children,
 }: SliderProps) {
   return (
     <MuiSlider
@@ -33,9 +31,7 @@ function Slider({
       value={value}
       onChange={onChange}
       sx={{ width }}
-    >
-      {children}
-    </MuiSlider>
+    />
   );
 }
 
