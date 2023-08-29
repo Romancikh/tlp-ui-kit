@@ -1,7 +1,7 @@
 import MuiCssBaseline from "@mui/material/CssBaseline";
 
 function CssBaseline() {
-  return MuiCssBaseline;
+  return <MuiCssBaseline />;
 }
 
 export default CssBaseline;

@@ -1,13 +1,18 @@
-import MuiSelect, { SelectChangeEvent } from "@mui/material/Select";
+import MuiSelect from "@mui/material/Select";
 import { PropsWithChildren } from "react";
+
+export type SelectChangeEvent<Value = string> =
+  | (Event & { target: { value: Value; name: string } })
+  | React.ChangeEvent<HTMLInputElement>;
 
 type SelectProps = PropsWithChildren & {
   size?: "small";
   fullWidth?: boolean;
   value?: string;
   disabled?: boolean;
-  onChange?: (event: SelectChangeEvent<string>) => void;
+  onChange?: (event: SelectChangeEvent) => void;
   maxWidth?: number;
+  flex?: string;
 };
 
 function Select({
@@ -17,6 +22,7 @@ function Select({
   disabled,
   onChange,
   maxWidth,
+  flex,
   children,
 }: SelectProps) {
   return (
@@ -26,7 +32,7 @@ function Select({
       value={value}
       disabled={disabled}
       onChange={onChange}
-      sx={{ maxWidth }}
+      sx={{ maxWidth, flex }}
     >
       {children}
     </MuiSelect>

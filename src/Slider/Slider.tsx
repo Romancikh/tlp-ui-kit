@@ -7,7 +7,11 @@ type SliderProps = {
   min?: number;
   max?: number;
   value?: number;
-  onChange?: () => void;
+  onChange?: (
+    event: Event,
+    value: number | number[],
+    activeThumb: number
+  ) => void;
   width?: string;
 };
 
