@@ -16,32 +16,51 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    children: [
-      <div key="div1">First Div</div>,
-      <div key="div2">Second Div</div>,
-      <div key="div3">Third Div</div>,
-    ],
+    children: (
+      <>
+        <div key="div1">First Div</div>
+        <div key="div2">Second Div</div>
+        <div key="div3">Third Div</div>
+      </>
+    ),
   },
 };
 
-export const Gap: Story = {
+export const Row: Story = {
+  args: {
+    direction: "row",
+    children: (
+      <>
+        <div key="div1">First Div</div>
+        <div key="div2">Second Div</div>
+        <div key="div3">Third Div</div>
+      </>
+    ),
+  },
+};
+
+export const spacing: Story = {
   args: {
     spacing: 7,
-    children: [
-      <div key="div1">First Div</div>,
-      <div key="div2">Second Div</div>,
-      <div key="div3">Third Div</div>,
-    ],
+    children: (
+      <>
+        <div key="div1">First Div</div>
+        <div key="div2">Second Div</div>
+        <div key="div3">Third Div</div>
+      </>
+    ),
   },
 };
 
 export const MarginTop: Story = {
   args: {
     marginTop: 7,
-    children: [
-      <div key="div1">First Div</div>,
-      <div key="div2">Second Div</div>,
-      <div key="div3">Third Div</div>,
-    ],
+    children: (
+      <>
+        <div key="div1">First Div</div>
+        <div key="div2">Second Div</div>
+        <div key="div3">Third Div</div>
+      </>
+    ),
   },
 };
