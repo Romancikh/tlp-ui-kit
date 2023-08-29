@@ -19,28 +19,26 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  args: {
-    children: (
-      <>
-        <ListItem divider>
-          <ListItemIcon>
-            <Icon name="CheckCircleOutlineIcon" color="success" />
-          </ListItemIcon>
-          <ListItemText>ListItem 1</ListItemText>
-        </ListItem>
-        <ListItem divider>
-          <ListItemIcon>
-            <Icon name="CancelOutlinedIcon" color="error" />
-          </ListItemIcon>
-          <ListItemText>ListItem 2</ListItemText>
-        </ListItem>
-        <ListItem>
-          <ListItemIcon>
-            <Icon name="AutoStoriesIcon" color="secondary" />
-          </ListItemIcon>
-          <ListItemText>ListItem 3</ListItemText>
-        </ListItem>
-      </>
-    ),
-  },
+  render: ({ ...args }) => (
+    <List {...args}>
+      <ListItem divider>
+        <ListItemIcon>
+          <Icon name="CheckCircleOutlineIcon" color="success" />
+        </ListItemIcon>
+        <ListItemText>ListItem 1</ListItemText>
+      </ListItem>
+      <ListItem divider>
+        <ListItemIcon>
+          <Icon name="CancelOutlinedIcon" color="error" />
+        </ListItemIcon>
+        <ListItemText>ListItem 2</ListItemText>
+      </ListItem>
+      <ListItem>
+        <ListItemIcon>
+          <Icon name="AutoStoriesIcon" color="secondary" />
+        </ListItemIcon>
+        <ListItemText>ListItem 3</ListItemText>
+      </ListItem>
+    </List>
+  ),
 };

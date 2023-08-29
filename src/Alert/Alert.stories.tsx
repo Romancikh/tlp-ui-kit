@@ -10,6 +10,12 @@ const meta = {
     layout: "centered",
   },
   tags: ["autodocs"],
+  args: {
+    severity: "success",
+  },
+  argTypes: {
+    severity: { control: "select" },
+  },
 } satisfies Meta<typeof Alert>;
 
 export default meta;
@@ -17,17 +23,15 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    children: "Some content",
+    children: "Some alert text",
   },
 };
 
 export const AlertWithTitle: Story = {
-  args: {
-    children: (
-      <>
-        <AlertTitle>Alert</AlertTitle>
-        This is an alert with title
-      </>
-    ),
-  },
+  render: ({ ...args }) => (
+    <Alert {...args}>
+      <AlertTitle>Alert</AlertTitle>
+      This is an alert with title
+    </Alert>
+  ),
 };
