@@ -1,10 +1,8 @@
 import type { Meta } from "@storybook/react";
 
 import { useState } from "react";
+import Icon from "../Icon/Icon";
 import IconButton from "../IconButton/IconButton";
-import DeleteOutlineIcon from "../Icons/DeleteOutlineIcon";
-import EditIcon from "../Icons/EditIcon";
-import MenuIcon from "../Icons/MenuIcon";
 import ListItemIcon from "../ListItemIcon/ListItemIcon";
 import ListItemText from "../ListItemText/ListItemText";
 import MenuItem from "../MenuItem/MenuItem";
@@ -33,18 +31,18 @@ export const Default = () => {
   return (
     <>
       <IconButton onClick={handleClick}>
-        <MenuIcon />
+        <Icon name="MenuIcon" />
       </IconButton>
       <Menu anchorEl={anchorEl} open={open} onClose={handleClose}>
         <MenuItem>
           <ListItemIcon>
-            <EditIcon color="primary" />
+            <Icon name="EditIcon" color="primary" />
           </ListItemIcon>
           <ListItemText>Редактировать</ListItemText>
         </MenuItem>
         <MenuItem>
           <ListItemIcon>
-            <DeleteOutlineIcon color="primary" />
+            <Icon name="DeleteOutlineIcon" color="primary" />
           </ListItemIcon>
           <ListItemText>Удалить</ListItemText>
         </MenuItem>

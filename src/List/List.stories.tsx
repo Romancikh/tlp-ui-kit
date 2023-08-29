@@ -1,8 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import AutoStoriesIcon from "../Icons/AutoStoriesIcon";
-import CancelOutlinedIcon from "../Icons/CancelOutlinedIcon";
-import CheckCircleOutlineIcon from "../Icons/CheckCircleOutlineIcon";
+import Icon from "../Icon/Icon";
 import ListItem from "../ListItem/ListItem";
 import ListItemIcon from "../ListItemIcon/ListItemIcon";
 import ListItemText from "../ListItemText/ListItemText";
@@ -26,19 +24,19 @@ export const Default: Story = {
       <>
         <ListItem divider>
           <ListItemIcon>
-            <CheckCircleOutlineIcon color="success" />
+            <Icon name="CheckCircleOutlineIcon" color="success" />
           </ListItemIcon>
           <ListItemText>ListItem 1</ListItemText>
         </ListItem>
         <ListItem divider>
           <ListItemIcon>
-            <CancelOutlinedIcon color="error" />
+            <Icon name="CancelOutlinedIcon" color="error" />
           </ListItemIcon>
           <ListItemText>ListItem 2</ListItemText>
         </ListItem>
         <ListItem>
           <ListItemIcon>
-            <AutoStoriesIcon color="secondary" />
+            <Icon name="AutoStoriesIcon" color="secondary" />
           </ListItemIcon>
           <ListItemText>ListItem 3</ListItemText>
         </ListItem>

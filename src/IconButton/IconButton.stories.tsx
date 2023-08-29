@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import AddIcon from "../Icons/AddIcon";
+import Icon from "../Icon/Icon";
 import IconButton from "./IconButton";
 
 const meta = {
@@ -16,7 +16,9 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  args: {
-    children: <AddIcon />,
-  },
+  render: ({ ...args }) => (
+    <IconButton {...args}>
+      <Icon name="AddIcon" />
+    </IconButton>
+  ),
 };
