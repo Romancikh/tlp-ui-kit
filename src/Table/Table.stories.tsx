@@ -19,22 +19,29 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  args: {
-    children: (
-      <>
-        <TableHead>
-          <TableRow>
-            <TableCell background="#DFE4EC">Head 1</TableCell>
-            <TableCell background="#DFE4EC">Head 2</TableCell>
+  render: ({ ...args }) => (
+    <Table {...args}>
+      <TableHead>
+        <TableRow>
+          {[1, 2, 3, 4, 5, 6].map((item) => (
+            <TableCell background="#DFE4EC" key={item}>
+              Head {`${item}`}
+            </TableCell>
+          ))}
+        </TableRow>
+      </TableHead>
+      <TableBody background="#FFFFFF">
+        {[1, 2, 3, 4, 5, 6].map((item) => (
+          <TableRow key={item}>
+            <TableCell>Cell {`${item}`}1</TableCell>
+            <TableCell>Cell {`${item}`}2</TableCell>
+            <TableCell>Cell {`${item}`}3</TableCell>
+            <TableCell>Cell {`${item}`}4</TableCell>
+            <TableCell>Cell {`${item}`}5</TableCell>
+            <TableCell>Cell {`${item}`}6</TableCell>
           </TableRow>
-        </TableHead>
-        <TableBody background="#FFFFFF">
-          <TableRow>
-            <TableCell>Cell 1</TableCell>
-            <TableCell>Cell 2</TableCell>
-          </TableRow>
-        </TableBody>
-      </>
-    ),
-  },
+        ))}
+      </TableBody>
+    </Table>
+  ),
 };
