@@ -1,8 +1,8 @@
 import MuiIconButton from "@mui/material/IconButton";
-import { PropsWithChildren } from "react";
+import { MouseEventHandler, PropsWithChildren } from "react";
 
 type IconButtonProps = PropsWithChildren & {
-  onClick?: () => void;
+  onClick?: MouseEventHandler<HTMLButtonElement>;
 };
 
 function IconButton({ onClick, children }: IconButtonProps) {

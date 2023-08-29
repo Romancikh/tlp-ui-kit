@@ -3,7 +3,7 @@ import { PropsWithChildren } from "react";
 
 type MenuProps = PropsWithChildren & {
   open: boolean;
-  anchorEl?: Element;
+  anchorEl?: Element | null;
   onClose?: () => void;
 };
 

@@ -1,7 +1,10 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta } from "@storybook/react";
 
+import { useState } from "react";
+import IconButton from "../IconButton/IconButton";
 import DeleteOutlineIcon from "../Icons/DeleteOutlineIcon";
 import EditIcon from "../Icons/EditIcon";
+import MenuIcon from "../Icons/MenuIcon";
 import ListItemIcon from "../ListItemIcon/ListItemIcon";
 import ListItemText from "../ListItemText/ListItemText";
 import MenuItem from "../MenuItem/MenuItem";
@@ -17,13 +20,22 @@ const meta = {
 } satisfies Meta<typeof Menu>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {
-  args: {
-    open: true,
-    children: (
-      <>
+export const Default = () => {
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+  return (
+    <>
+      <IconButton onClick={handleClick}>
+        <MenuIcon />
+      </IconButton>
+      <Menu anchorEl={anchorEl} open={open} onClose={handleClose}>
         <MenuItem>
           <ListItemIcon>
             <EditIcon color="primary" />
@@ -36,7 +48,7 @@ export const Default: Story = {
           </ListItemIcon>
           <ListItemText>Удалить</ListItemText>
         </MenuItem>
-      </>
-    ),
-  },
+      </Menu>
+    </>
+  );
 };
