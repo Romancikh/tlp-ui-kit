@@ -3,12 +3,13 @@ import { PropsWithChildren } from "react";
 
 type StackProps = PropsWithChildren & {
   marginTop?: number;
-  gap?: number;
+  spacing?: number;
+  direction?: "row" | "column" | "row-reverse" | "column-reverse";
 };
 
-function Stack({ marginTop, gap, children }: StackProps) {
+function Stack({ marginTop, spacing, direction, children }: StackProps) {
   return (
-    <MuiStack marginTop={marginTop} gap={gap}>
+    <MuiStack marginTop={marginTop} spacing={spacing} direction={direction}>
       {children}
     </MuiStack>
   );

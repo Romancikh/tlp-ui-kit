@@ -26,7 +26,7 @@ export const Default: Story = {
 
 export const Gap: Story = {
   args: {
-    gap: 7,
+    spacing: 7,
     children: [
       <div key="div1">First Div</div>,
       <div key="div2">Second Div</div>,
