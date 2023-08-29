@@ -13,7 +13,6 @@ type TextFieldProps = {
   size?: "small";
   value?: string;
   onChange?: ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement>;
-  flex?: string;
   margin?: "normal";
 };
 
@@ -28,7 +27,6 @@ function TextField({
   size,
   value,
   onChange,
-  flex,
   margin,
 }: TextFieldProps) {
   return (
@@ -44,7 +42,6 @@ function TextField({
       value={value}
       onChange={onChange}
       margin={margin}
-      sx={{ flex }}
     />
   );
 }
