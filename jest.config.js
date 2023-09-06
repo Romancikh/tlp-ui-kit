@@ -9,6 +9,7 @@ const config = {
       babelConfig: true,
     },
   },
+  testPathIgnorePatterns: ["/node_modules/", ".*\\.screenshot\\.test\\.ts$"],
 };
 
 module.exports = config;

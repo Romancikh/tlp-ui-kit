@@ -131,3 +131,6 @@ dist
 
 # Snapshots
 *.snap
+
+# Screenshots
+*-snapshots
