@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Slider renders correctly 1`] = `
+<div>
+  <span
+    class="MuiSlider-root MuiSlider-colorPrimary MuiSlider-sizeMedium css-zugq7j-MuiSlider-root"
+  >
+    <span
+      class="MuiSlider-rail css-14pt78w-MuiSlider-rail"
+    />
+    <span
+      class="MuiSlider-track css-1gv0vcd-MuiSlider-track"
+      style="left: 0%; width: 0%;"
+    />
+    <span
+      class="MuiSlider-thumb MuiSlider-thumbSizeMedium MuiSlider-thumbColorPrimary MuiSlider-thumb MuiSlider-thumbSizeMedium MuiSlider-thumbColorPrimary css-eg0mwd-MuiSlider-thumb"
+      data-index="0"
+      style="left: 0%;"
+    >
+      <input
+        aria-orientation="horizontal"
+        aria-valuemax="5"
+        aria-valuemin="1"
+        aria-valuenow="1"
+        data-index="0"
+        max="5"
+        min="1"
+        step="1"
+        style="border: 0px; height: 100%; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 100%; direction: ltr;"
+        type="range"
+        value="1"
+      />
+    </span>
+  </span>
+</div>
+`;

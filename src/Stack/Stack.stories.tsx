@@ -39,7 +39,7 @@ export const Row: Story = {
   },
 };
 
-export const spacing: Story = {
+export const Spacing: Story = {
   args: {
     spacing: 7,
     children: (

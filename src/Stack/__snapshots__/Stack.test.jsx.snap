@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Margin Stack renders correctly 1`] = `
+<div>
+  <div
+    class="MuiStack-root css-1mvtyz3-MuiStack-root"
+  >
+    <div>
+      First Div
+    </div>
+    <div>
+      Second Div
+    </div>
+    <div>
+      Third Div
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Row Stack renders correctly 1`] = `
+<div>
+  <div
+    class="MuiStack-root css-m69qwo-MuiStack-root"
+  >
+    <div>
+      First Div
+    </div>
+    <div>
+      Second Div
+    </div>
+    <div>
+      Third Div
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Spacing Stack renders correctly 1`] = `
+<div>
+  <div
+    class="MuiStack-root css-3ouhma-MuiStack-root"
+  >
+    <div>
+      First Div
+    </div>
+    <div>
+      Second Div
+    </div>
+    <div>
+      Third Div
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Stack renders correctly 1`] = `
+<div>
+  <div
+    class="MuiStack-root css-nen11g-MuiStack-root"
+  >
+    <div>
+      First Div
+    </div>
+    <div>
+      Second Div
+    </div>
+    <div>
+      Third Div
+    </div>
+  </div>
+</div>
+`;
