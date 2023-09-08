@@ -1,4 +1,3 @@
-import MuiButton from "@mui/material/Button";
 import { CSSProperties, MouseEvent, PropsWithChildren, ReactNode } from "react";
 import "./Button.scss";
 
@@ -15,37 +14,6 @@ type ButtonProps = PropsWithChildren & {
 };
 
 function Button({
-  children,
-  variant,
-  disabled,
-  onClick,
-  color,
-  startIcon,
-  minWidth,
-  alignSelf,
-  padding,
-  marginTop,
-}: ButtonProps) {
-  return (
-    <MuiButton
-      variant={variant}
-      disabled={disabled}
-      onClick={onClick}
-      color={color ?? "primary"}
-      startIcon={startIcon}
-      sx={{
-        minWidth,
-        alignSelf,
-        padding,
-        marginTop,
-      }}
-    >
-      {children}
-    </MuiButton>
-  );
-}
-
-function Button2({
   children,
   variant,
   disabled,
@@ -102,4 +70,3 @@ function Button2({
 }
 
 export default Button;
-export { Button2 };
