@@ -3,11 +3,21 @@ import { PropsWithChildren } from "react";
 
 type PaperProps = PropsWithChildren & {
   height?: string;
-  width?: "fit-content" | string;
+  elevation?: number;
+  width?: "fit-content" | string | number;
+  className?: string;
 };
 
-function Paper({ height, width, children }: PaperProps) {
-  return <MuiPaper sx={{ height, width }}>{children}</MuiPaper>;
+function Paper({ elevation, height, width, className, children }: PaperProps) {
+  return (
+    <MuiPaper
+      elevation={elevation}
+      className={className}
+      sx={{ height, width }}
+    >
+      {children}
+    </MuiPaper>
+  );
 }
 
 export default Paper;
