@@ -21,3 +21,12 @@ export const Default: Story = {
     children: "Some content",
   },
 };
+
+export const Elevation: Story = {
+  args: {
+    height: "128px",
+    width: "128px",
+    children: "Some content",
+    elevation: 12,
+  },
+};
