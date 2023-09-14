@@ -5,16 +5,15 @@ import {
   useRef,
   useState,
 } from "react";
-import Icon, { IconName } from "../Icon/Icon";
 import List from "../List/List";
 import Paper from "../Paper/Paper";
 import "./Select.scss";
 
-export type SelectChangeEvent<Value = string> =
+type SelectChangeEvent<Value = string> =
   | (Event & { target: { value: Value; name: string } })
   | React.ChangeEvent<HTMLInputElement>;
 
-export type SelectProps = PropsWithChildren & {
+type SelectProps = PropsWithChildren & {
   size?: "small";
   fullWidth?: boolean;
   value?: string;
@@ -23,6 +22,19 @@ export type SelectProps = PropsWithChildren & {
   maxWidth?: number;
   flex?: string;
 };
+
+function Icon({ rotate }: { rotate: boolean }) {
+  return (
+    <svg
+      className={`icon icon_${rotate ? "rotate" : ""}`}
+      focusable="false"
+      aria-hidden="true"
+      viewBox="0 0 24 24"
+    >
+      <path d="M7 10l5 5 5-5z"></path>
+    </svg>
+  );
+}
 
 function Select({
   size,
@@ -34,15 +46,16 @@ function Select({
   flex,
   children,
 }: SelectProps) {
-  const [open, setOpen] = useState(false);
-  const [iconName, setIconName] = useState<IconName>("ExpandMoreIcon");
+  const [open, setOpen] = useState<boolean>(false);
+  const [iconRotation, setIconRotation] = useState<boolean>(false);
+  let isActive = open;
   const selectValueRef = useRef<HTMLDivElement | null>(null);
 
   const handleSelect = (selectedValue: string) => {
     if (!onChange) return;
     onChange(selectedValue);
     setOpen(false);
-    setIconName("ExpandMoreIcon");
+    setIconRotation((prev) => !prev);
   };
 
   return (
@@ -51,18 +64,19 @@ function Select({
         ref={selectValueRef}
         className={`select__value select__value_size_${size} select__value_${
           fullWidth ? "full-width" : ""
-        } select__value_${disabled ? "disabled" : ""}`}
+        } select__value_${disabled ? "disabled" : ""} select__value_${
+          isActive ? "active" : ""
+        }`}
         style={{
           maxWidth,
         }}
         onClick={() => {
           if (disabled) return;
           setOpen(!open);
-          if (iconName === "ExpandMoreIcon") setIconName("ExpandLessIcon");
-          else setIconName("ExpandMoreIcon");
+          setIconRotation((prev) => !prev);
         }}
       >
-        {value} <Icon name={iconName} />
+        {value} <Icon rotate={iconRotation} />
       </div>
       {open && (
         <Paper
