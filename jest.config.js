@@ -10,6 +10,9 @@ const config = {
     },
   },
   testPathIgnorePatterns: ["/node_modules/", ".*\\.screenshot\\.test\\.ts$"],
+  moduleNameMapper: {
+    "\\.(css|less|sass|scss)$": "identity-obj-proxy",
+  },
 };
 
 module.exports = config;

@@ -3,14 +3,11 @@
 exports[`Contained button renders correctly 1`] = `
 <div>
   <button
-    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-sghohy-MuiButtonBase-root-MuiButton-root"
+    class="button button_variant_contained button_color_undefined"
     tabindex="0"
     type="button"
   >
     contained
-    <span
-      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-    />
   </button>
 </div>
 `;
@@ -18,14 +15,11 @@ exports[`Contained button renders correctly 1`] = `
 exports[`Disabled button renders correctly 1`] = `
 <div>
   <button
-    class="MuiButtonBase-root MuiButton-root MuiButton-Disabled MuiButton-DisabledPrimary MuiButton-sizeMedium MuiButton-DisabledSizeMedium MuiButton-root MuiButton-Disabled MuiButton-DisabledPrimary MuiButton-sizeMedium MuiButton-DisabledSizeMedium css-1w1rijm-MuiButtonBase-root-MuiButton-root"
+    class="button button_variant_Disabled button_color_undefined"
     tabindex="0"
     type="button"
   >
     Disabled
-    <span
-      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-    />
   </button>
 </div>
 `;
@@ -33,14 +27,11 @@ exports[`Disabled button renders correctly 1`] = `
 exports[`Outlined button renders correctly 1`] = `
 <div>
   <button
-    class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium css-1rwt2y5-MuiButtonBase-root-MuiButton-root"
+    class="button button_variant_outlined button_color_undefined"
     tabindex="0"
     type="button"
   >
     outlined
-    <span
-      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-    />
   </button>
 </div>
 `;
@@ -48,14 +39,11 @@ exports[`Outlined button renders correctly 1`] = `
 exports[`Success button renders correctly 1`] = `
 <div>
   <button
-    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSuccess MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedSuccess MuiButton-sizeMedium MuiButton-containedSizeMedium css-ke5b6m-MuiButtonBase-root-MuiButton-root"
+    class="button button_variant_contained button_color_success"
     tabindex="0"
     type="button"
   >
     Success
-    <span
-      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-    />
   </button>
 </div>
 `;
