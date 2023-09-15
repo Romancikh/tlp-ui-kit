@@ -1,3 +1,4 @@
+import classnames from "classnames";
 import {
   Children,
   PropsWithChildren,
@@ -8,10 +9,6 @@ import {
 import List from "../List/List";
 import Paper from "../Paper/Paper";
 import "./Select.scss";
-
-type SelectChangeEvent<Value = string> =
-  | (Event & { target: { value: Value; name: string } })
-  | React.ChangeEvent<HTMLInputElement>;
 
 type SelectProps = PropsWithChildren & {
   size?: "small";
@@ -62,11 +59,11 @@ function Select({
     <div className={`select`} style={{ flex }}>
       <div
         ref={selectValueRef}
-        className={`select__value select__value_size_${size} select__value_${
-          fullWidth ? "full-width" : ""
-        } select__value_${disabled ? "disabled" : ""} select__value_${
-          isActive ? "active" : ""
-        }`}
+        className={classnames("select__value", `select__value_size_${size}`, {
+          "select__value_full-width": fullWidth,
+          select__value_disabled: disabled,
+          select__value_active: isActive,
+        })}
         style={{
           maxWidth,
         }}
