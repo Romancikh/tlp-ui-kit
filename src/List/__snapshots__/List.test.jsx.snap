@@ -3,7 +3,7 @@
 exports[`List renders correctly 1`] = `
 <div>
   <ul
-    class="MuiList-root MuiList-padding css-h4y409-MuiList-root"
+    class="list"
   >
     <li
       class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-h8lxwn-MuiListItem-root"
