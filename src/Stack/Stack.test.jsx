@@ -7,7 +7,7 @@ test("Stack renders correctly", () => {
       <div key="div1">First Div</div>
       <div key="div2">Second Div</div>
       <div key="div3">Third Div</div>
-    </Stack>
+    </Stack>,
   );
   expect(container).toMatchSnapshot();
 });
@@ -18,7 +18,7 @@ test("Row Stack renders correctly", () => {
       <div key="div1">First Div</div>
       <div key="div2">Second Div</div>
       <div key="div3">Third Div</div>
-    </Stack>
+    </Stack>,
   );
   expect(container).toMatchSnapshot();
 });
@@ -29,7 +29,7 @@ test("Spacing Stack renders correctly", () => {
       <div key="div1">First Div</div>
       <div key="div2">Second Div</div>
       <div key="div3">Third Div</div>
-    </Stack>
+    </Stack>,
   );
   expect(container).toMatchSnapshot();
 });
@@ -40,7 +40,7 @@ test("Margin Stack renders correctly", () => {
       <div key="div1">First Div</div>
       <div key="div2">Second Div</div>
       <div key="div3">Third Div</div>
-    </Stack>
+    </Stack>,
   );
   expect(container).toMatchSnapshot();
 });

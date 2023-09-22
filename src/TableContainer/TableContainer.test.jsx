@@ -32,7 +32,7 @@ test("TableContainer renders correctly", () => {
           ))}
         </TableBody>
       </Table>
-    </TableContainer>
+    </TableContainer>,
   );
   expect(container).toMatchSnapshot();
 });

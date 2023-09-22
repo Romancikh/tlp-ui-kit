@@ -12,7 +12,7 @@ test("Alert with title renders correctly", () => {
     <Alert>
       <AlertTitle>Alert</AlertTitle>
       This is an alert with title
-    </Alert>
+    </Alert>,
   );
   expect(container).toMatchSnapshot();
 });
