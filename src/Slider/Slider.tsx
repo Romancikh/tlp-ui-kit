@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import MuiSlider from "@mui/material/Slider";
 
 type SliderProps = {

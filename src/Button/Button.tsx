@@ -34,7 +34,8 @@ function Button({
     const x = event.clientX - rect.left - size / 2;
     const y = event.clientY - rect.top - size / 2;
 
-    rippleElement.style.width = rippleElement.style.height = `${size}px`;
+    rippleElement.style.width = `${size}px`;
+    rippleElement.style.height = `${size}px`;
     rippleElement.style.left = `${x}px`;
     rippleElement.style.top = `${y}px`;
 

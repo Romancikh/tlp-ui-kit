@@ -17,6 +17,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   render: ({ ...args }) => (
+    // eslint-disable-next-line react/jsx-props-no-spreading
     <IconButton {...args}>
       <Icon name="AddIcon" />
     </IconButton>

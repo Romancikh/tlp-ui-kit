@@ -2,13 +2,6 @@ import { CSSProperties, PropsWithChildren } from "react";
 
 import "./Paper.scss";
 
-type PaperProps = PropsWithChildren & {
-  className?: string;
-  elevation?: keyof typeof elevationBoxShadow;
-  height?: string;
-  width?: "fit-content" | number | string;
-};
-
 const elevationBoxShadow = {
   0: "",
   1: "0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12)",
@@ -35,6 +28,13 @@ const elevationBoxShadow = {
   22: " 0px 10px 14px -6px rgba(0,0,0,0.2),0px 22px 35px 3px rgba(0,0,0,0.14),0px 8px 42px 7px rgba(0,0,0,0.12)",
   23: " 0px 11px 14px -7px rgba(0,0,0,0.2),0px 23px 36px 3px rgba(0,0,0,0.14),0px 9px 44px 8px rgba(0,0,0,0.12)",
   24: " 0px 11px 15px -7px rgba(0,0,0,0.2),0px 24px 38px 3px rgba(0,0,0,0.14),0px 9px 46px 8px rgba(0,0,0,0.12)",
+};
+
+type PaperProps = PropsWithChildren & {
+  className?: string;
+  elevation?: keyof typeof elevationBoxShadow;
+  height?: string;
+  width?: "fit-content" | number | string;
 };
 
 function Paper({

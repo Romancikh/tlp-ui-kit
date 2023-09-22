@@ -1,6 +1,6 @@
 import type { Meta } from "@storybook/react";
 
-import { useState } from "react";
+import { MouseEvent, useState } from "react";
 
 import Icon from "../Icon/Icon";
 import IconButton from "../IconButton/IconButton";
@@ -23,7 +23,7 @@ export default meta;
 export function Default() {
   const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);
   const open = Boolean(anchorEl);
-  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
+  const handleClick = (event: MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
   };
   const handleClose = () => {

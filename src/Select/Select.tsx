@@ -1,6 +1,7 @@
 import {
   Children,
   PropsWithChildren,
+  ReactElement,
   cloneElement,
   useRef,
   useState,
@@ -10,15 +11,12 @@ import List from "../List/List";
 import Paper from "../Paper/Paper";
 import "./Select.scss";
 
-type SelectChangeEvent<Value = string> =
-  | (Event & { target: { name: string; value: Value } })
-  | React.ChangeEvent<HTMLInputElement>;
-
 type SelectProps = PropsWithChildren & {
   disabled?: boolean;
   flex?: string;
   fullWidth?: boolean;
   maxWidth?: number;
+  // eslint-disable-next-line no-unused-vars
   onChange?: (value: string) => void;
   size?: "small";
   value?: string;
@@ -72,12 +70,16 @@ function Select({
           setOpen(!open);
           setIconRotation((prev) => !prev);
         }}
+        onKeyDown={() => {}}
         ref={selectValueRef}
+        role="button"
         style={{
           maxWidth,
         }}
+        tabIndex={0}
       >
-        {value} <Icon rotate={iconRotation} />
+        {value}
+        <Icon rotate={iconRotation} />
       </div>
       {open && (
         <Paper
@@ -86,14 +88,20 @@ function Select({
           width={selectValueRef.current?.offsetWidth}
         >
           <List>
-            {Children.map(children, (child) =>
-              cloneElement(child as React.ReactElement, {
-                onClick: () => {
-                  if (!child) return;
-                  if (!(typeof child === "object" && "props" in child)) return;
-                  handleSelect(child.props.value);
-                },
-              }),
+            {Children.map(
+              children,
+              (child) =>
+                // eslint-disable-next-line implicit-arrow-linebreak
+                cloneElement(child as ReactElement, {
+                  onClick: () => {
+                    if (!child) return;
+                    if (!(typeof child === "object" && "props" in child)) {
+                      return;
+                    }
+                    handleSelect(child.props.value);
+                  },
+                }),
+              // eslint-disable-next-line function-paren-newline
             )}
           </List>
         </Paper>

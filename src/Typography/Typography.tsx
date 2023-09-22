@@ -79,7 +79,7 @@ function Typography({
     { className: `typography typography_variant_${variant}`, style: textStyle },
     children,
   );
-  return <>{textElement}</>;
+  return textElement;
 }
 
 export default Typography;

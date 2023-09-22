@@ -29,6 +29,7 @@ export const Default: Story = {
 
 export const AlertWithTitle: Story = {
   render: ({ ...args }) => (
+    // eslint-disable-next-line react/jsx-props-no-spreading
     <Alert {...args}>
       <AlertTitle>Alert</AlertTitle>
       This is an alert with title
