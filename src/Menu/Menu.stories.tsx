@@ -1,6 +1,7 @@
 import type { Meta } from "@storybook/react";
 
 import { useState } from "react";
+
 import Icon from "../Icon/Icon";
 import IconButton from "../IconButton/IconButton";
 import ListItemIcon from "../ListItemIcon/ListItemIcon";
@@ -9,18 +10,18 @@ import MenuItem from "../MenuItem/MenuItem";
 import Menu from "./Menu";
 
 const meta = {
-  title: "Menu",
   component: Menu,
   parameters: {
     layout: "centered",
   },
   tags: ["autodocs"],
+  title: "Menu",
 } satisfies Meta<typeof Menu>;
 
 export default meta;
 
-export const Default = () => {
-  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+export function Default() {
+  const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);
   const open = Boolean(anchorEl);
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
@@ -33,20 +34,20 @@ export const Default = () => {
       <IconButton onClick={handleClick}>
         <Icon name="MenuIcon" />
       </IconButton>
-      <Menu anchorEl={anchorEl} open={open} onClose={handleClose}>
+      <Menu anchorEl={anchorEl} onClose={handleClose} open={open}>
         <MenuItem>
           <ListItemIcon>
-            <Icon name="EditIcon" color="primary" />
+            <Icon color="primary" name="EditIcon" />
           </ListItemIcon>
           <ListItemText>Редактировать</ListItemText>
         </MenuItem>
         <MenuItem>
           <ListItemIcon>
-            <Icon name="DeleteOutlineIcon" color="primary" />
+            <Icon color="primary" name="DeleteOutlineIcon" />
           </ListItemIcon>
           <ListItemText>Удалить</ListItemText>
         </MenuItem>
       </Menu>
     </>
   );
-};
+}

@@ -3,15 +3,15 @@ import type { Meta, StoryObj } from "@storybook/react";
 import Icon from "./Icon";
 
 const meta = {
-  title: "Icon",
+  argTypes: {
+    color: { control: "select" },
+  },
   component: Icon,
   parameters: {
     layout: "centered",
   },
   tags: ["autodocs"],
-  argTypes: {
-    color: { control: "select" },
-  },
+  title: "Icon",
 } satisfies Meta<typeof Icon>;
 
 export default meta;
@@ -25,8 +25,8 @@ export const AddIcon: Story = {
 
 export const Colored: Story = {
   args: {
-    name: "AddIcon",
     color: "success",
+    name: "AddIcon",
   },
 };
 

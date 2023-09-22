@@ -16,8 +16,8 @@ const icons = {
   CheckCircleOutlineIcon,
   DeleteOutlineIcon,
   EditIcon,
-  ExpandMoreIcon,
   ExpandLessIcon,
+  ExpandMoreIcon,
   MenuIcon,
   NavigateBeforeIcon,
 };
@@ -25,11 +25,11 @@ const icons = {
 type IconName = keyof typeof icons;
 
 type IconProps = {
+  color?: "error" | "primary" | "secondary" | "success";
   name: IconName;
-  color?: "success" | "primary" | "error" | "secondary";
 };
 
-function Icon({ name, color }: IconProps) {
+function Icon({ color, name }: IconProps) {
   const SelectedIcon = icons[name];
   return <SelectedIcon color={color} />;
 }

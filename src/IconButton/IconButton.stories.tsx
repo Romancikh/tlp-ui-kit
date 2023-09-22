@@ -4,12 +4,12 @@ import Icon from "../Icon/Icon";
 import IconButton from "./IconButton";
 
 const meta = {
-  title: "IconButton",
   component: IconButton,
   parameters: {
     layout: "centered",
   },
   tags: ["autodocs"],
+  title: "IconButton",
 } satisfies Meta<typeof IconButton>;
 
 export default meta;

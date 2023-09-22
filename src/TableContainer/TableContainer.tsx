@@ -5,7 +5,7 @@ type TableContainerProps = PropsWithChildren & {
   height?: string;
 };
 
-function TableContainer({ height, children }: TableContainerProps) {
+function TableContainer({ children, height }: TableContainerProps) {
   return <MuiTableContainer sx={{ height }}>{children}</MuiTableContainer>;
 }
 

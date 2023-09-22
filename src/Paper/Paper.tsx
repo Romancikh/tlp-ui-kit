@@ -1,11 +1,12 @@
 import { CSSProperties, PropsWithChildren } from "react";
+
 import "./Paper.scss";
 
 type PaperProps = PropsWithChildren & {
-  height?: string;
-  elevation?: keyof typeof elevationBoxShadow;
-  width?: "fit-content" | string | number;
   className?: string;
+  elevation?: keyof typeof elevationBoxShadow;
+  height?: string;
+  width?: "fit-content" | number | string;
 };
 
 const elevationBoxShadow = {
@@ -37,16 +38,16 @@ const elevationBoxShadow = {
 };
 
 function Paper({
+  children,
+  className,
   elevation = 1,
   height,
   width,
-  className,
-  children,
 }: PaperProps) {
   const paperStyle: CSSProperties = {
-    width,
-    height,
     boxShadow: elevationBoxShadow[elevation],
+    height,
+    width,
   };
   return (
     <div className={`paper ${className}`} style={paperStyle}>

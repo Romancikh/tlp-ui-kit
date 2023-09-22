@@ -4,18 +4,18 @@ import AlertTitle from "../AlertTitle/AlertTitle";
 import Alert from "./Alert";
 
 const meta = {
-  title: "Alert",
+  argTypes: {
+    severity: { control: "select" },
+  },
+  args: {
+    severity: "success",
+  },
   component: Alert,
   parameters: {
     layout: "centered",
   },
   tags: ["autodocs"],
-  args: {
-    severity: "success",
-  },
-  argTypes: {
-    severity: { control: "select" },
-  },
+  title: "Alert",
 } satisfies Meta<typeof Alert>;
 
 export default meta;

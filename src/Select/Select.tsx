@@ -5,50 +5,51 @@ import {
   useRef,
   useState,
 } from "react";
+
 import List from "../List/List";
 import Paper from "../Paper/Paper";
 import "./Select.scss";
 
 type SelectChangeEvent<Value = string> =
-  | (Event & { target: { value: Value; name: string } })
+  | (Event & { target: { name: string; value: Value } })
   | React.ChangeEvent<HTMLInputElement>;
 
 type SelectProps = PropsWithChildren & {
-  size?: "small";
-  fullWidth?: boolean;
-  value?: string;
   disabled?: boolean;
-  onChange?: (value: string) => void;
-  maxWidth?: number;
   flex?: string;
+  fullWidth?: boolean;
+  maxWidth?: number;
+  onChange?: (value: string) => void;
+  size?: "small";
+  value?: string;
 };
 
 function Icon({ rotate }: { rotate: boolean }) {
   return (
     <svg
+      aria-hidden="true"
       className={`icon icon_${rotate ? "rotate" : ""}`}
       focusable="false"
-      aria-hidden="true"
       viewBox="0 0 24 24"
     >
-      <path d="M7 10l5 5 5-5z"></path>
+      <path d="M7 10l5 5 5-5z" />
     </svg>
   );
 }
 
 function Select({
-  size,
-  fullWidth,
-  value,
-  disabled,
-  onChange,
-  maxWidth,
-  flex,
   children,
+  disabled,
+  flex,
+  fullWidth,
+  maxWidth,
+  onChange,
+  size,
+  value,
 }: SelectProps) {
   const [open, setOpen] = useState<boolean>(false);
   const [iconRotation, setIconRotation] = useState<boolean>(false);
-  let isActive = open;
+  const isActive = open;
   const selectValueRef = useRef<HTMLDivElement | null>(null);
 
   const handleSelect = (selectedValue: string) => {
@@ -59,29 +60,29 @@ function Select({
   };
 
   return (
-    <div className={`select`} style={{ flex }}>
+    <div className="select" style={{ flex }}>
       <div
-        ref={selectValueRef}
         className={`select__value select__value_size_${size} select__value_${
           fullWidth ? "full-width" : ""
         } select__value_${disabled ? "disabled" : ""} select__value_${
           isActive ? "active" : ""
         }`}
-        style={{
-          maxWidth,
-        }}
         onClick={() => {
           if (disabled) return;
           setOpen(!open);
           setIconRotation((prev) => !prev);
+        }}
+        ref={selectValueRef}
+        style={{
+          maxWidth,
         }}
       >
         {value} <Icon rotate={iconRotation} />
       </div>
       {open && (
         <Paper
-          elevation={10}
           className="select__items"
+          elevation={10}
           width={selectValueRef.current?.offsetWidth}
         >
           <List>
@@ -92,7 +93,7 @@ function Select({
                   if (!(typeof child === "object" && "props" in child)) return;
                   handleSelect(child.props.value);
                 },
-              })
+              }),
             )}
           </List>
         </Paper>

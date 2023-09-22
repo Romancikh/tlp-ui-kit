@@ -5,7 +5,7 @@ type ListItemTextProps = PropsWithChildren & {
   textAlign?: "right";
 };
 
-function ListItemText({ textAlign, children }: ListItemTextProps) {
+function ListItemText({ children, textAlign }: ListItemTextProps) {
   return <MuiListItemText sx={{ textAlign }}>{children}</MuiListItemText>;
 }
 

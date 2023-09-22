@@ -2,41 +2,41 @@ import MuiContainer from "@mui/material/Container";
 import { PropsWithChildren } from "react";
 
 type ContainerProps = PropsWithChildren & {
-  maxWidth?: "xl" | false;
-  display?: "grid" | "flex";
-  flexDirection?: "column";
-  placeItems?: "center";
   alignItems?: "center";
-  margin?: string;
-  height?: string;
-  minHeight?: string;
   background?: string;
+  display?: "flex" | "grid";
+  flexDirection?: "column";
+  height?: string;
+  margin?: string;
+  maxWidth?: "xl" | false;
+  minHeight?: string;
+  placeItems?: "center";
 };
 
 function Container({
-  maxWidth,
-  display,
-  flexDirection,
-  placeItems,
   alignItems,
-  margin,
-  height,
-  minHeight,
   background,
   children,
+  display,
+  flexDirection,
+  height,
+  margin,
+  maxWidth,
+  minHeight,
+  placeItems,
 }: ContainerProps) {
   return (
     <MuiContainer
       maxWidth={maxWidth}
       sx={{
+        alignItems,
+        background,
         display,
         flexDirection,
-        placeItems,
-        alignItems,
-        margin,
         height,
+        margin,
         minHeight,
-        background,
+        placeItems,
       }}
     >
       {children}
