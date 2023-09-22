@@ -29,6 +29,13 @@ module.exports = {
   },
   plugins: ["@typescript-eslint", "react", "prettier", "perfectionist"],
   rules: {
+    "import/extensions": "off",
+    "import/no-extraneous-dependencies": "off",
+    "import/no-unresolved": "off",
+    "object-curly-newline": "off",
     quotes: ["error", "double"],
+    "react/jsx-filename-extension": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/require-default-props": "off",
   },
 };
