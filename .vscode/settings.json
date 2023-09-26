@@ -6,22 +6,5 @@
     "source.organizeImports": true,
     "source.fixAll": true
   },
-  "eslint.codeActionsOnSave.rules": [
-    "perfectionist/sort-array-includes",
-    "perfectionist/sort-astro-attributes",
-    "perfectionist/sort-classes",
-    "perfectionist/sort-enums",
-    "perfectionist/sort-exports",
-    "perfectionist/sort-imports",
-    "perfectionist/sort-interfaces",
-    "perfectionist/sort-jsx-props",
-    "perfectionist/sort-maps",
-    "perfectionist/sort-named-exports",
-    "perfectionist/sort-named-imports",
-    "perfectionist/sort-object-types",
-    "perfectionist/sort-objects",
-    "perfectionist/sort-svelte-attributes",
-    "perfectionist/sort-union-types",
-    "perfectionist/sort-vue-attributes"
-  ]
+  "eslint.codeActionsOnSave.rules": ["perfectionist/*"]
 }
