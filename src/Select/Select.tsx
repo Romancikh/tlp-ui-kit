@@ -1,3 +1,4 @@
+import classnames from "classnames";
 import {
   Children,
   PropsWithChildren,
@@ -60,11 +61,11 @@ function Select({
   return (
     <div className="select" style={{ flex }}>
       <div
-        className={`select__value select__value_size_${size} select__value_${
-          fullWidth ? "full-width" : ""
-        } select__value_${disabled ? "disabled" : ""} select__value_${
-          isActive ? "active" : ""
-        }`}
+        className={classnames("select__value", `select__value_size_${size}`, {
+          "select__value_full-width": fullWidth,
+          select__value_disabled: disabled,
+          select__value_active: isActive,
+        })}
         onClick={() => {
           if (disabled) return;
           setOpen(!open);
