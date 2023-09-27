@@ -6,7 +6,7 @@ test("IconButton renders correctly", () => {
   const { container } = render(
     <IconButton>
       <Icon name="AddIcon" />
-    </IconButton>
+    </IconButton>,
   );
   expect(container).toMatchSnapshot();
 });

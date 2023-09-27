@@ -26,7 +26,7 @@ test("List renders correctly", () => {
         </ListItemIcon>
         <ListItemText>ListItem 3</ListItemText>
       </ListItem>
-    </List>
+    </List>,
   );
   expect(container).toMatchSnapshot();
 });

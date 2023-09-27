@@ -21,7 +21,8 @@
   min-width: 64px;
   padding: 6px 16px;
   border-radius: 4px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  transition:
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -41,8 +42,10 @@
 
   &_variant_contained {
     color: #fff;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 1px -2px,
-      rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 1px 5px 0px;
+    box-shadow:
+      rgba(0, 0, 0, 0.2) 0px 3px 1px -2px,
+      rgba(0, 0, 0, 0.14) 0px 2px 2px 0px,
+      rgba(0, 0, 0, 0.12) 0px 1px 5px 0px;
     background-color: #1976d2;
 
     span.ripple {
@@ -57,7 +60,8 @@
 
     &:hover {
       background-color: #1565c0;
-      box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+      box-shadow:
+        0px 2px 4px -1px rgba(0, 0, 0, 0.2),
         0px 4px 5px 0px rgba(0, 0, 0, 0.14),
         0px 1px 10px 0px rgba(0, 0, 0, 0.12);
     }

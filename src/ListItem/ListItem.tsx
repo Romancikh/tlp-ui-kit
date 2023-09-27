@@ -5,7 +5,7 @@ type ListItemProps = PropsWithChildren & {
   divider?: boolean;
 };
 
-function ListItem({ divider, children }: ListItemProps) {
+function ListItem({ children, divider }: ListItemProps) {
   return <MuiListItem divider={divider}>{children}</MuiListItem>;
 }
 

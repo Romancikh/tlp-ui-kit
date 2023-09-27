@@ -5,7 +5,7 @@ type IconButtonProps = PropsWithChildren & {
   onClick?: MouseEventHandler<HTMLButtonElement>;
 };
 
-function IconButton({ onClick, children }: IconButtonProps) {
+function IconButton({ children, onClick }: IconButtonProps) {
   return <MuiIconButton onClick={onClick}>{children}</MuiIconButton>;
 }
 

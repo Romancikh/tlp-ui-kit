@@ -2,58 +2,58 @@ import MuiBox from "@mui/material/Box";
 import { PropsWithChildren } from "react";
 
 type BoxProps = PropsWithChildren & {
+  alignItems?: "center" | "flex-start";
+  bgcolor?: string;
+  border?: string;
+  borderRadius?: number | string;
+  boxSizing?: "border-box";
   display?: "flex";
   flexDirection?: "column";
-  justifyContent?: "space-between" | "flex-start";
-  width?: number | string;
-  maxWidth?: number;
-  boxSizing?: "border-box";
-  padding?: number;
-  border?: string;
-  borderRadius?: string | number;
+  gap?: number;
+  height?: "fit-content" | number;
+  justifyContent?: "flex-start" | "space-between";
   marginLeft?: number;
   marginTop?: number;
-  gap?: number;
-  alignItems?: "center" | "flex-start";
-  height?: "fit-content" | number;
-  bgcolor?: string;
+  maxWidth?: number;
+  padding?: number;
+  width?: number | string;
 };
 
 function Box({
-  display,
-  flexDirection,
-  justifyContent,
-  width,
-  maxWidth,
-  boxSizing,
-  padding,
+  alignItems,
+  bgcolor,
   border,
   borderRadius,
+  boxSizing,
+  children,
+  display,
+  flexDirection,
+  gap,
+  height,
+  justifyContent,
   marginLeft,
   marginTop,
-  gap,
-  alignItems,
-  height,
-  bgcolor,
-  children,
+  maxWidth,
+  padding,
+  width,
 }: BoxProps) {
   return (
     <MuiBox
-      display={display}
-      flexDirection={flexDirection}
-      justifyContent={justifyContent}
-      width={width}
-      maxWidth={maxWidth}
-      boxSizing={boxSizing}
-      padding={padding}
+      alignItems={alignItems}
+      bgcolor={bgcolor}
       border={border}
       borderRadius={borderRadius}
+      boxSizing={boxSizing}
+      display={display}
+      flexDirection={flexDirection}
+      gap={gap}
+      height={height}
+      justifyContent={justifyContent}
       marginLeft={marginLeft}
       marginTop={marginTop}
-      gap={gap}
-      alignItems={alignItems}
-      height={height}
-      bgcolor={bgcolor}
+      maxWidth={maxWidth}
+      padding={padding}
+      width={width}
     >
       {children}
     </MuiBox>

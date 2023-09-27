@@ -2,13 +2,13 @@ import MuiAlert from "@mui/material/Alert";
 import { PropsWithChildren } from "react";
 
 type AlertProps = PropsWithChildren & {
-  severity?: "error" | "warning" | "success";
   onClose?: () => void;
+  severity?: "error" | "success" | "warning";
 };
 
-function Alert({ severity = "success", onClose, children }: AlertProps) {
+function Alert({ children, onClose, severity = "success" }: AlertProps) {
   return (
-    <MuiAlert severity={severity} onClose={onClose}>
+    <MuiAlert onClose={onClose} severity={severity}>
       {children}
     </MuiAlert>
   );

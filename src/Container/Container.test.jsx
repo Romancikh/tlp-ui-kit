@@ -3,7 +3,11 @@ import Container from "./Container";
 
 test("Default container renders correctly", () => {
   const { container } = render(
-    <Container background="lightgreen" height="100vh" children="Some content" />
+    <Container
+      background="lightgreen"
+      height="100vh"
+      children="Some content"
+    />,
   );
   expect(container).toMatchSnapshot();
 });
@@ -15,7 +19,7 @@ test("MaxWidth container renders correctly", () => {
       background="lightblue"
       height="100vh"
       children="Some content"
-    />
+    />,
   );
   expect(container).toMatchSnapshot();
 });

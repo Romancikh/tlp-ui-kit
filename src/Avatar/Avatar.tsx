@@ -2,19 +2,19 @@ import MuiAvatar from "@mui/material/Avatar";
 
 type AvatarProps = {
   alt?: string;
+  height?: string;
   src?: string;
   width?: string;
-  height?: string;
 };
 
-function Avatar({ alt, src, width, height }: AvatarProps) {
+function Avatar({ alt, height, src, width }: AvatarProps) {
   return (
     <MuiAvatar
       alt={alt}
       src={src}
       sx={{
-        width,
         height,
+        width,
       }}
     />
   );

@@ -3,45 +3,45 @@ import MuiTextField from "@mui/material/TextField";
 import { ChangeEventHandler } from "react";
 
 type TextFieldProps = {
-  type?: "number";
-  select?: boolean;
-  multiline?: boolean;
-  placeholder?: string;
   id?: string;
-  minRows?: number;
   inputProps?: InputBaseComponentProps;
-  size?: "small";
-  value?: string;
-  onChange?: ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement>;
   margin?: "normal";
+  minRows?: number;
+  multiline?: boolean;
+  onChange?: ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement>;
+  placeholder?: string;
+  select?: boolean;
+  size?: "small";
+  type?: "number";
+  value?: string;
 };
 
 function TextField({
-  type,
-  select,
-  multiline,
-  placeholder,
   id,
-  minRows,
   inputProps,
-  size,
-  value,
-  onChange,
   margin,
+  minRows,
+  multiline,
+  onChange,
+  placeholder,
+  select,
+  size,
+  type,
+  value,
 }: TextFieldProps) {
   return (
     <MuiTextField
-      type={type}
-      select={select}
-      multiline={multiline}
-      placeholder={placeholder}
       id={id}
-      minRows={minRows}
       inputProps={inputProps}
-      size={size}
-      value={value}
-      onChange={onChange}
       margin={margin}
+      minRows={minRows}
+      multiline={multiline}
+      onChange={onChange}
+      placeholder={placeholder}
+      select={select}
+      size={size}
+      type={type}
+      value={value}
     />
   );
 }

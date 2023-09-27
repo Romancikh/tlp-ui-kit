@@ -2,14 +2,14 @@ import MuiMenu from "@mui/material/Menu";
 import { PropsWithChildren } from "react";
 
 type MenuProps = PropsWithChildren & {
-  open: boolean;
   anchorEl?: Element | null;
   onClose?: () => void;
+  open: boolean;
 };
 
-function Menu({ open, anchorEl, onClose, children }: MenuProps) {
+function Menu({ anchorEl, children, onClose, open }: MenuProps) {
   return (
-    <MuiMenu open={open} anchorEl={anchorEl} onClose={onClose}>
+    <MuiMenu anchorEl={anchorEl} onClose={onClose} open={open}>
       {children}
     </MuiMenu>
   );

@@ -3,16 +3,16 @@ import type { Meta, StoryObj } from "@storybook/react";
 import Button from "./Button";
 
 const meta = {
-  title: "Button",
+  args: {
+    disabled: false,
+    variant: "contained",
+  },
   component: Button,
   parameters: {
     layout: "centered",
   },
   tags: ["autodocs"],
-  args: {
-    variant: "contained",
-    disabled: false,
-  },
+  title: "Button",
 } satisfies Meta<typeof Button>;
 
 export default meta;
@@ -20,30 +20,30 @@ type Story = StoryObj<typeof meta>;
 
 export const Contained: Story = {
   args: {
-    variant: "contained",
     children: "contained",
+    variant: "contained",
   },
 };
 
 export const Outlined: Story = {
   args: {
-    variant: "outlined",
     children: "outlined",
+    variant: "outlined",
   },
 };
 
 export const Disabled: Story = {
   args: {
-    variant: "contained",
-    disabled: true,
     children: "disabled",
+    disabled: true,
+    variant: "contained",
   },
 };
 
 export const Success: Story = {
   args: {
-    variant: "contained",
-    color: "success",
     children: "success",
+    color: "success",
+    variant: "contained",
   },
 };

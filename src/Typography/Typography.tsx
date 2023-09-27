@@ -1,7 +1,16 @@
 import { CSSProperties, PropsWithChildren, createElement } from "react";
+
 import "./Typography.scss";
 
 type TypographyProps = PropsWithChildren & {
+  color?: string;
+  fontSize?: number;
+  fontWeight?: number;
+  lineHeight?: number;
+  marginLeft?: number;
+  marginTop?: number;
+  marginX?: number;
+  marginY?: number;
   variant?:
     | "body1"
     | "body2"
@@ -15,15 +24,7 @@ type TypographyProps = PropsWithChildren & {
     | "h6"
     | "subtitle1"
     | "subtitle2";
-  color?: string;
-  fontSize?: number;
   width?: number;
-  marginLeft?: number;
-  marginTop?: number;
-  marginY?: number;
-  marginX?: number;
-  lineHeight?: number;
-  fontWeight?: number;
 };
 
 const component = {
@@ -42,26 +43,26 @@ const component = {
 };
 
 function Typography({
-  variant = "body1",
+  children,
   color,
   fontSize,
-  width,
+  fontWeight,
+  lineHeight,
   marginLeft,
   marginTop,
-  marginY,
   marginX,
-  lineHeight,
-  fontWeight,
-  children,
+  marginY,
+  variant = "body1",
+  width,
 }: TypographyProps) {
   const textStyle: CSSProperties = {
     color,
     fontSize,
-    width,
+    fontWeight,
+    lineHeight,
     marginLeft,
     marginTop,
-    lineHeight,
-    fontWeight,
+    width,
   };
 
   if (marginY) {
@@ -75,10 +76,10 @@ function Typography({
 
   const textElement = createElement(
     component[variant],
-    { style: textStyle, className: `typography typography_variant_${variant}` },
-    children
+    { className: `typography typography_variant_${variant}`, style: textStyle },
+    children,
   );
-  return <>{textElement}</>;
+  return textElement;
 }
 
 export default Typography;

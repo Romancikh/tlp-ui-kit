@@ -8,7 +8,7 @@ test("Box renders correctly", () => {
       height={200}
       border="1px solid #000"
       children="Some content"
-    />
+    />,
   );
   expect(container).toMatchSnapshot();
 });

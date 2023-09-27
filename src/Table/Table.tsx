@@ -5,7 +5,7 @@ type TableProps = PropsWithChildren & {
   stickyHeader?: boolean;
 };
 
-function Table({ stickyHeader, children }: TableProps) {
+function Table({ children, stickyHeader }: TableProps) {
   return <MuiTable stickyHeader={stickyHeader}>{children}</MuiTable>;
 }
 

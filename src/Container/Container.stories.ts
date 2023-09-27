@@ -3,9 +3,9 @@ import type { Meta, StoryObj } from "@storybook/react";
 import Container from "./Container";
 
 const meta = {
-  title: "Container",
   component: Container,
   tags: ["autodocs"],
+  title: "Container",
 } satisfies Meta<typeof Container>;
 
 export default meta;
@@ -21,9 +21,9 @@ export const Default: Story = {
 
 export const MaxWidth: Story = {
   args: {
-    maxWidth: false,
-    children: "Some content",
     background: "lightblue",
+    children: "Some content",
     height: "100vh",
+    maxWidth: false,
   },
 };

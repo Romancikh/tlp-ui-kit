@@ -1,29 +1,30 @@
 import { CSSProperties, MouseEvent, PropsWithChildren, ReactNode } from "react";
+
 import "./Button.scss";
 
 type ButtonProps = PropsWithChildren & {
-  variant: "contained" | "outlined";
-  disabled?: boolean;
-  onClick?: () => void;
-  color?: "success";
-  startIcon?: ReactNode;
-  minWidth?: "unset";
   alignSelf?: "flex-end";
-  padding?: number;
+  color?: "success";
+  disabled?: boolean;
   marginTop?: number;
+  minWidth?: "unset";
+  onClick?: () => void;
+  padding?: number;
+  startIcon?: ReactNode;
+  variant: "contained" | "outlined";
 };
 
 function Button({
-  children,
-  variant,
-  disabled,
-  onClick,
-  color,
-  startIcon,
-  minWidth,
   alignSelf,
-  padding,
+  children,
+  color,
+  disabled,
   marginTop,
+  minWidth,
+  onClick,
+  padding,
+  startIcon,
+  variant,
 }: ButtonProps) {
   const handleRipple = (event: MouseEvent<HTMLButtonElement>) => {
     const button = event.currentTarget;
@@ -33,7 +34,8 @@ function Button({
     const x = event.clientX - rect.left - size / 2;
     const y = event.clientY - rect.top - size / 2;
 
-    rippleElement.style.width = rippleElement.style.height = `${size}px`;
+    rippleElement.style.width = `${size}px`;
+    rippleElement.style.height = `${size}px`;
     rippleElement.style.left = `${x}px`;
     rippleElement.style.top = `${y}px`;
 
@@ -47,21 +49,21 @@ function Button({
   };
 
   const buttonStyle = {
-    minWidth,
     alignSelf,
-    padding,
     marginTop,
+    minWidth,
+    padding,
   } satisfies CSSProperties;
 
   return (
     <button
       className={`button button_variant_${variant} button_color_${color}`}
-      tabIndex={0}
-      type="button"
       disabled={disabled}
       onClick={onClick}
       onMouseDown={handleRipple}
       style={buttonStyle}
+      tabIndex={0}
+      type="button"
     >
       {startIcon && <span className="button__start-icon">{startIcon}</span>}
       {children}

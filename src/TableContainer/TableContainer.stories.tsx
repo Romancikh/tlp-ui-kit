@@ -8,26 +8,31 @@ import TableRow from "../TableRow/TableRow";
 import TableContainer from "./TableContainer";
 
 const meta = {
-  title: "TableContainer",
   component: TableContainer,
   parameters: {
     layout: "centered",
   },
   tags: ["autodocs"],
+  title: "TableContainer",
 } satisfies Meta<typeof TableContainer>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
+  args: {
+    height: "20vh",
+  },
   render: ({ ...args }) => (
+    // eslint-disable-next-line react/jsx-props-no-spreading
     <TableContainer {...args}>
       <Table>
         <TableHead>
           <TableRow>
             {[1, 2, 3, 4, 5, 6].map((item) => (
               <TableCell background="#DFE4EC" key={item}>
-                Head {`${item}`}
+                Head
+                {`${item}`}
               </TableCell>
             ))}
           </TableRow>
@@ -35,19 +40,34 @@ export const Default: Story = {
         <TableBody background="#FFFFFF">
           {[1, 2, 3, 4, 5, 6].map((item) => (
             <TableRow key={item}>
-              <TableCell>Cell {`${item}`}1</TableCell>
-              <TableCell>Cell {`${item}`}2</TableCell>
-              <TableCell>Cell {`${item}`}3</TableCell>
-              <TableCell>Cell {`${item}`}4</TableCell>
-              <TableCell>Cell {`${item}`}5</TableCell>
-              <TableCell>Cell {`${item}`}6</TableCell>
+              <TableCell>
+                Cell
+                {`${item}`}
+              </TableCell>
+              <TableCell>
+                Cell
+                {`${item}`}
+              </TableCell>
+              <TableCell>
+                Cell
+                {`${item}`}
+              </TableCell>
+              <TableCell>
+                Cell
+                {`${item}`}
+              </TableCell>
+              <TableCell>
+                Cell
+                {`${item}`}
+              </TableCell>
+              <TableCell>
+                Cell
+                {`${item}`}
+              </TableCell>
             </TableRow>
           ))}
         </TableBody>
       </Table>
     </TableContainer>
   ),
-  args: {
-    height: "20vh",
-  },
 };
