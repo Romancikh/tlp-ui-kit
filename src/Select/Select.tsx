@@ -62,9 +62,9 @@ function Select({
     <div className="select" style={{ flex }}>
       <div
         className={classnames("select__value", `select__value_size_${size}`, {
-          "select__value_full-width": fullWidth,
-          select__value_disabled: disabled,
           select__value_active: isActive,
+          select__value_disabled: disabled,
+          "select__value_full-width": fullWidth,
         })}
         onClick={() => {
           if (disabled) return;
