@@ -34,7 +34,8 @@
     "@mui/icons-material": "^5.14.3",
     "@mui/material": "^5.14.4",
     "classnames": "^2.3.2",
-    "eslint-config-airbnb": "^19.0.4"
+    "eslint-config-airbnb": "^19.0.4",
+    "tlp-code-style": "github:Romancikh/tlp-code-style"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.22.14",
